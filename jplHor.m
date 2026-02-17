@@ -47,6 +47,7 @@ num_sim = length(jd1);             % Length of Simulation Window
 % ----------------------
 % Main Code
 % ----------------------
+theta_P = (pi/2) - atan((norm(r_mars_vec))/(R_sun + R_mars));
 
 % ----------------------
 % JPL HORIZONS API
@@ -95,4 +96,5 @@ function [r_vec, v_vec] = get_jpl_horizons(body_id, t_start, t_end)
         v_vec = [C{6}, C{7}, C{8}];
     end
 end
+
 
